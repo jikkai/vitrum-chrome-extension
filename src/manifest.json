@@ -1,0 +1,17 @@
+{
+  "background": {
+    "scripts": ["background/index.ts"]
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "content/index.ts"
+      ],
+      "matches": [
+        "https://vitrum.asaki.me/*",
+        "http://localhost:3000/*"
+      ]
+    }],
+  "browser_action": {},
+  "permissions": ["activeTab", "storage"]
+}
