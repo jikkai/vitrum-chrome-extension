@@ -13,5 +13,7 @@ $dataDOM.addEventListener('EventSyncUploadChrome', () => {
 })
 
 chrome.storage.sync.get([KEY], result => {
+  if (!result[KEY]) return
+
   $dataDOM.innerText = JSON.stringify(result[KEY])
 })
